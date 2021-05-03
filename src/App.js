@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }from 'react';
+import Quote from './components/Quote'
+
+
+const initialQuote = {
+  quote: "Life isn’t about getting and having, it’s about giving and being.",
+  author: "Kevin Kruse"
+}
+
 
 function App() {
+
+  const [quote, setQuote] = useState(initialQuote);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <img src="" alt=""/>
+      <button>Next Quote</button>
+      <Quote quote={quote}/>
     </div>
   );
 }
